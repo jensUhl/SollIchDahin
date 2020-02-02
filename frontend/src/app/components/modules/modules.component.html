@@ -1,0 +1,95 @@
+<!-- My modules card -->
+<div class="container">
+    <div class="row">
+        <h3>Meine Module</h3>
+        <div class="text-right">
+            <button mat-button style="background-color: #3949ab;" class="btn btn-primary" routerLink="/rwth-module">Hinzufügen</button>
+        </div>
+    </div>
+</div>
+
+<!-- My modules table -->
+<div class="container">
+    <table class="table table-striped table-bordered table-hover">
+        <tbody>
+            <!--
+            <tr>
+                <th>Modul</th>
+            </tr>
+            -->
+            <!--
+                <tr *ngFor="let modul of userModules">
+                <td>{{modul.name}}</td>
+            </tr>
+            -->
+            <tr>
+                <td>
+                    Test
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- My classes card -->
+<div class="container">
+    <div class="row">
+        <h3>Meine Veranstaltungen</h3>
+        <div class="text-right">
+            <button mat-button style="background-color: #3949ab;" class="btn btn-primary" data-toggle="modal"
+                data-target="#addClass">Hinzufügen</button>
+        </div>
+    </div>
+</div>
+
+<!-- Pop up window for adding classes -->
+<div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="addClassModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Füge eine Veranstaltung hinzu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Wähle aus deinen Modulen aus.
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Module
+                        <span class="caret"></span></button>
+                    <div class="dropdown-menu" id="classList">
+                        <button class="dropdown-item" *ngFor="let module of userModules"><a href=""></a>{{module.name}}</button>
+                    </div>
+                </div>
+                <form>
+                    <div class="datePicker">
+                        <label for="chooseDate">Gebe das Datum und die Uhrzeit an.</label>
+                        <input type="datetime-local" class="form-control" id="dateAndTime">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                <button type="button" (click) = "onClickClass" class="btn btn-primary">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- My classes table -->
+<div class="container">
+    <table class="table table-striped table-bordered table-hover">
+        <tbody>
+            <tr>
+                <th>Modul</th>
+                <th>Datum</th>
+                <th>Uhrzeit</th>
+            </tr>
+            <tr *ngFor="let modul of userClasses">
+                <td>{{modul.name}}</td>
+                <td>{{modul.day}}.{{modul.month}}.</td>
+                <td>{{modul.hour}}:{{modul.minute}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

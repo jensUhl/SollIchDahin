@@ -1,0 +1,27 @@
+<h2 style="text-align: center; padding-top: 50px;">Wähle deine Module     aus.
+</h2>
+
+<!-- Search modul -->
+<div class="container">
+  <div class="row">
+    <div class="search-modul">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Suche dein Modul">
+    </div>
+
+    <!-- RWTH modules table -->
+    <table class="table table-striped table-hover table-bordered">
+      <!--
+      <thead>
+        <tr>
+          <th>Modul</th>
+        </tr>
+      </thead>
+      -->
+      <tbody>
+        <tr *ngFor="let modul of modules | filter:searchText" (click)="onSelect(modul)">
+          <td>{{modul.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

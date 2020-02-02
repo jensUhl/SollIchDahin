@@ -1,0 +1,48 @@
+h3 {
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 25px;
+} 
+
+button {
+  border-color: #3949ab;
+  background-color: #3949ab;
+}
+
+.calcbutton {
+  margin-bottom: 25px;
+}
+
+.card {
+  margin-top: 25px;
+}
+
+.testclass {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container {
+  align-content: center;
+  max-width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+table {
+  margin-top: 25px;
+  empty-cells: show;
+}
+
+.negativ {
+  background-color: #dc3545;
+}
+
+.neutral {
+  background-color: #ffc107;
+}
+
+.positiv {
+  background-color: #28a745;
+}

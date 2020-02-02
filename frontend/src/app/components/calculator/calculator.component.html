@@ -1,0 +1,147 @@
+<div class="container">
+  
+  <h3>Du sagst uns, wie du dich fühlst.</h3>
+
+  <!-- Input fields for variables -->
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Müdigkeit</h5>
+            <div class="card-text testclass">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle chooseValues" type="button" id="chooseTiredness" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wie müde bist du?</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <button class="dropdown-item negativ" (click)="setNegativ('tired')">Toter als tot</button>
+                  <button class="dropdown-item neutral" (click)="setNeutral('tired')">Moinsen</button>
+                  <button class="dropdown-item positiv" (click)="setPositiv('tired')">Koffeein ballert</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Wohlbefinden</h5>
+          <div class="card-text testclass">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle chooseValues" type="button" id="chooseFeeling" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wie fühlst du dich heute?</button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item negativ" (click)="setNegativ('feeling')">Eine Runde Bierpong zu viel</button>
+                <button class="dropdown-item neutral" (click)="setNeutral('feeling')">Alles easy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Bock</h5>
+          <div class="card-text testclass">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle chooseValues" type="button" id="chooseMotivation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wie viel Bock hast du heute?</button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item negativ" (click)="setNegativ('motivation')">Gar kein Bock</button>
+                <button class="dropdown-item neutral" (click)="setNeutral('motivation')">Kann man mal machen</button>
+                <button class="dropdown-item positiv" (click)="setPositiv('motivation')">Her mit dem Wissen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Wir sagen dir, ob du gehen sollst oder nicht.</h3>
+
+  <!-- Button to calculate answer -->
+  <div class="text-center">
+    <button type="calcButton" class="btn btn-primary" (click)="shouldI">Soll ich?</button>
+  </div>
+
+  <div class="card">
+    <div class="card-body bg-light">
+      <div class="card-text">
+        Grün heißt gehen, rot heißt blau machen und bei gelb solltest du dein Gewissen konsultieren. 
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Table as calender for today -->
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Zeit</th>
+        <th>Veranstaltung</th>
+        <!--
+        <th>Wetter</th>
+        <th>Wichtigkeit</th>
+        -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>07:00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>08:00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>09:00</td>
+        <td></td>
+      </tr>
+      <tr class="bg-warning">
+        <td>10:00</td>
+        <td rowspan=2>Berechenbarkeit und Komplexität</td>
+      </tr>
+      <tr class="bg-warning">
+        <td>11:00</td>
+      </tr>
+      <tr>
+        <td>12:00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>13:00</td>
+        <td></td>
+      </tr>
+      <tr class="bg-success">
+        <td>14:00</td>
+        <td rowspan=2>WebTech</td>
+      </tr>
+      <tr class="bg-success">
+        <td>15:00</td>
+      </tr>
+      <tr class="bg-danger">
+        <td>16:00</td>
+        <td rowspan=2>Analysis für Informatiker</td>
+      </tr>
+      <tr class="bg-danger">
+        <td>17:00</td>
+      </tr>
+      <tr>
+        <td>18:00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>20:00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>21:00</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

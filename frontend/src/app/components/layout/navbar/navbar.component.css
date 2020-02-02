@@ -1,0 +1,11 @@
+.navHeight {
+  height: 80px;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.navbar {
+  font-size: larger;
+}

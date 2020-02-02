@@ -1,0 +1,19 @@
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  border-color: #3949ab;
+  background-color: #3949ab;
+}
+
+.body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 70px;
+}
+
+.footer {
+  width: 100%;
+}

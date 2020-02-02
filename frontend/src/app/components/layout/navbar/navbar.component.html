@@ -1,0 +1,33 @@
+<nav class="navbar navHeight navbar-expand-sm sticky-top navbar-dark" style="background-color: #3949ab;">
+
+  <!-- Logo -->
+  <a class="navbar-brand" href=""><img src="assets/img/soidahin-logo-v1-white.png" heigth="60" width="140 /"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar navbar-nav">
+
+      <!-- Only show these if logged in -->
+      <li *ngIf="auth.loggedIn()" class="nav-item">
+        <a class="nav-link" href="sollich">Soll ich?</a>
+      </li>
+      <li *ngIf="auth.loggedIn()" class="nav-item">
+        <a class="nav-link" href="module">Module</a>
+      </li>
+    </ul>
+    <ul class="navbar navbar-nav navbar-right">
+      <li *ngIf="auth.loggedIn()" class="nav-item logout">
+        <a class="nav-link" (click)="onLogoutClick()" href="#">Abmelden</a>
+      </li>
+
+      <!-- Only show these if not logged in -->
+      <li *ngIf="!auth.loggedIn()" class="nav-item">
+        <a class="nav-link" href="profil">Anmelden</a>
+      </li>
+    </ul>
+  </div>
+</nav>
