@@ -16,26 +16,6 @@ export class CalculatorComponent implements OnInit {
   feeling = 0;
   motivation = 0;
 
-  // Increase variable for button click
-  increaseVar(num) {
-    switch (num) {
-      case 'tired':       if (this.tired < 3) { this.tired++; }           break;
-      case 'feeling':     if (this.feeling < 3) { this.feeling++; }       break;
-      case 'motivation':  if (this.motivation < 3) {this.motivation++; }  break;
-      default:                                                            break;
-    }
-  }
-
-  // Decrease variable for button click
-  decreaseVar(num) {
-    switch (num) {
-      case 'tired':       if (this.tired > -1) { this.tired--; }           break;
-      case 'feeling':     if (this.feeling > -1) { this.feeling--; }       break;
-      case 'motivation':  if (this.motivation > -1) { this.motivation--; } break;
-      default:                                                            break;
-    }
-  }
-
   // Method to set parameters to neutral, i.e. 0
   setNeutral(num) {
     switch (num) {
@@ -66,8 +46,7 @@ export class CalculatorComponent implements OnInit {
   }
 
   // Method to calculate the answer for all classes today
-
-  /*  DISCLAIMER
+  /*
   Note that the calculation is biased towards a positiv outcome. This is because we
   want this calculator to give a somewhat realistic answer and not just tell students
   they should not go to classes. That would we useless.
@@ -90,7 +69,6 @@ export class CalculatorComponent implements OnInit {
 
     }
   }
-
 
   constructor(private auth: AuthService) { }
 
